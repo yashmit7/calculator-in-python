@@ -1,18 +1,26 @@
-num1 = int(input("enter the first number:"))
-num2 = int(input("enter the second numebr:"))
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-operation = input("select one of the following- add, subtract, multiply, divide, remainder:")
+operation = input("Select one: add, subtract, multiply, divide, remainder: ").lower()
 
 if operation == "add":
-    print("adding the two digits:", num1 + num2)
+    print("Result:", num1 + num2)
 elif operation == "subtract":
-    print("subtracting the digits:", num1 - num2)
+    print("Result:", num1 - num2)
 elif operation == "multiply":
-    print("multiplying the digits:", num1 * num2)
+    print("Result:", num1 * num2)
 elif operation == "divide":
-    print("dividing the digits:", num1 / num2)
+    if num2 != 0:
+        print("Result:", num1 / num2)
+    else:
+        print("Cannot divide by zero")
 elif operation == "remainder":
-    print("remainder of the digits:", num1 % num2)
+    if num2 != 0:
+        print("Result:", num1 % num2)
+    else:
+        print("Cannot find remainder with zero")
+else:
+    print("Invalid operation")
 
 
 
